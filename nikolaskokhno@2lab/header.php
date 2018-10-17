@@ -20,7 +20,7 @@
               <a href="#home" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Home</button></a>
             </li>
             <li class="nav-item">
-              <a href="#newGames" class="nav-link waves-effect waves-light"><button class="btn btn-outline-warning btn-sm">New Games</button></a>
+              <a href="#newGames" class="nav-link waves-effect waves-light"><button class="btn btn-warning btn-sm">New Games</button></a>
             </li>
             <li class="nav-item">
               <a href="#guarantees" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Guarantees</button></a>

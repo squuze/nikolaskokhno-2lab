@@ -16,7 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
   </head>
   <body>
-
+    
 
 
     <!-- JQuery -->
@@ -29,3 +29,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/js/mdb.min.js"></script>
   </body>
 </html>
+
+<?php
+  include 'footer.php';
+?>
