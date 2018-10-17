@@ -17,23 +17,23 @@
         <div class="login-wrapper">
           <div class="row justify-content-md-center">
             <div class="col-md-6">
-            <form class="" action="index.html" method="post">
+            <form class="" action="php-server/register_user.php" method="post">
               <h3 class="text-center">Registration</h3>
               <div class="form-group mb-2">
-                <label for="">Enter you Email</label>
-                <input type="Email" class="form-control">
+                <label for=""><b>Email</b></label>
+                <input type="Email" class="form-control" name="email" placeholder="Enter you email..." required>
               </div>
               <div class="form-group">
-                <label for="">Enter you name</label>
-                <input type="text" class="form-control">
+                <label for=""><b>Username</b></label>
+                <input type="text" class="form-control" name="username" placeholder="Enret you username..." required>
               </div>
               <div class="form-group">
-                <label for="">Enter you password</label>
-                <input type="password" class="form-control">
+                <label for=""><b>Password</b></label>
+                <input type="password" class="form-control" name="password" placeholder="Enter you password..." required>
               </div>
               <div class="form-group">
-                <label for="">Replay you password</label>
-                <input type="password" class="form-control">
+                <label for=""><b>Re-enter password</b></label>
+                <input type="password" class="form-control" name="password" placeholder="Please enter password again..." required>
               </div>
               <div class="form-group remember-me">
                 <div class="checkbox pull-left">
