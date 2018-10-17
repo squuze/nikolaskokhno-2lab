@@ -1,3 +1,7 @@
+<?php
+  include 'header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,7 +16,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
   </head>
   <body>
-    
 
 
 

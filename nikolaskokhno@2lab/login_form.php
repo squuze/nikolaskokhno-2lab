@@ -20,12 +20,12 @@
             <form class="" action="index.html" method="post">
               <h3 class="text-center">Sign-in</h3>
               <div class="form-group mb-2">
-                <label for="">Enter you Email</label>
-                <input type="Email" class="form-control">
+                <label for="">Email</label>
+                <input type="Email" class="form-control" name="email" placeholder="Enter you email..." required>
               </div>
               <div class="form-group">
-                <label for="">Enter you password</label>
-                <input type="password" class="form-control">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter you password..." required>
               </div>
               <div class="form-group remember-me">
                 <div class="checkbox pull-left">
