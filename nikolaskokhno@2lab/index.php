@@ -16,10 +16,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
   </head>
   <style media="screen">
+
     .carousel-inner img {
       height: auto;
       width: 100%;
-
+      margin: 0 auto;
     }
 
     .carousel-inner h1{
@@ -34,7 +35,7 @@
       padding: 20px;
     }
   </style>
-  <body>
+  <body class="bg-dark">
     <wrapper>
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -66,10 +67,51 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-
     </wrapper>
 
+      <section class="text-center">
+        <div class="mt-5">
+          <div class="container">
+            <h2 class="mt-5 red-text"><b>Самые ожидаемые новинки 2018 года</b></h2>
+          </div>
+        </div>
+
+        <div class="new_game">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 mt-5 ngame">
+                <img src="https://steampay.com/product/skull-and-bones.jpg" alt="" >
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 mt-5 ngame">
+                <img src="https://steampay.com/product/age-of-wonders-planetfall.jpg" alt="">
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 mt-5 ngame">
+                <img src="https://steampay.com/product/beyond-good-and-evil-2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 mt-5 ngame">
+                <img src="https://steampay.com/product/metro-exodus.jpg" alt="">
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 mt-5 ngame">
+                <img src="https://steampay.com/product/the-division-2.jpg" alt="">
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 mt-5 ngame">
+                <img src="https://steampay.com/product/raging-justice.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <?php
+      include 'footer.php';
+    ?>
 
     <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -81,7 +123,3 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/js/mdb.min.js"></script>
   </body>
 </html>
-
-<?php
-  include 'footer.php';
-?>
