@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-xl bg-dark fixed-top scrolling-navbar">
+    <nav class="navbar navbar-expand-xl bg-dark scrolling-navbar">
       <div class="container">
         <a href="#" class="navbar-brand"><b class="brandLogo">New Generation</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="

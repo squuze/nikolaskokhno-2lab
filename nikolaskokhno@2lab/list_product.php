@@ -12,30 +12,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
   </head>
   <body>
-    <?php// include 'header.php'; ?>
+    <?php include 'header.php'; ?>
 
     <div class="list_product">
       <div class="container">
         <div class="row">
-          <ul>
+          <div class="col-lg-8">
+            <ul>
+              <br />
           <?php
             if (mysqli_num_rows($result) > 0) {
               $row = mysqli_fetch_array($result);
 
               do {
                 echo '
-                <div class="col-mg-2">
-                  <li>
-                    '.$row["title_game"].'
-                    <b>Price : </b>
-                    '.$row["price"].'
+                <div class="mt-2 bg-info" style="overflow: hidden;">
+                  <li class="border border-primary rounded">
+                    <div class="mt-2 mb-2 ml-1 mr-3">
+                      '.$row["title_game"].'
+                      <b class="float-right">Price :
+                      '.$row["price"].'</b>
+                    </div>
                   </li>
                 </div>
                 ';
               } while ($row = mysqli_fetch_array($result));
             }
           ?>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
