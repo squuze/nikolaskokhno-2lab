@@ -28,7 +28,8 @@
               $row = mysqli_fetch_array($result);
               do {
                 echo '
-                <div class="mt-2 bg-info" style="overflow: hidden;">
+                <a href="product.php?id='.$row["id"].'">
+                <div class="mt-2 bg-dark" style="overflow: hidden;">
                   <li class="border border-primary rounded">
                     <div class="mt-2 mb-2 ml-1 mr-3">
                       <b>'.$row["title_game"].'</b>
@@ -37,6 +38,7 @@
                     </div>
                   </li>
                 </div>
+                </a>
                 ';
               } while ($row = mysqli_fetch_array($result));
             }
