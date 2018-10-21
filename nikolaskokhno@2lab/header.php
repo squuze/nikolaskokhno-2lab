@@ -23,7 +23,7 @@
               <a href="#newGames" class="nav-link waves-effect waves-light"><button class="btn btn-warning btn-sm">New Games</button></a>
             </li>
             <li class="nav-item">
-              <a href="#guarantees" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Guarantees</button></a>
+              <a href="list_product.php" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">List game</button></a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Contact</button></a>

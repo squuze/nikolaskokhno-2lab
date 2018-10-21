@@ -14,22 +14,24 @@
   <body>
     <?php include 'header.php'; ?>
 
+
+
     <div class="list_product">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-md-8">
+            <h5 class="mt-5 text-warning text-uppercase font-weight-bold">Product Catalog:</h5>
             <ul>
-              <br />
+            <br />
           <?php
             if (mysqli_num_rows($result) > 0) {
               $row = mysqli_fetch_array($result);
-
               do {
                 echo '
                 <div class="mt-2 bg-info" style="overflow: hidden;">
                   <li class="border border-primary rounded">
                     <div class="mt-2 mb-2 ml-1 mr-3">
-                      '.$row["title_game"].'
+                      <b>'.$row["title_game"].'</b>
                       <b class="float-right">Price :
                       '.$row["price"].'</b>
                     </div>
