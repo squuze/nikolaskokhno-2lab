@@ -35,7 +35,7 @@
       padding: 20px;
     }
   </style>
-  <body class="bg-dark">
+  <body class="">
     <wrapper>
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">

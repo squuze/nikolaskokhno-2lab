@@ -21,7 +21,7 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
             <div class="product_page">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-lg-5">
+                  <div class="col-lg-4">
                     <div class="title_game">
                       <h4 class="mt-3 ml-2">'.$row1["title_game"].'</h4>
                     </div>
@@ -43,7 +43,7 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
                     </div>
                   </div>
 
-                  <div class="col-lg-7">
+                  <div class="col-lg-8">
                     <div class="row">
                       <div class="col-lg-7">
                         <div class="game_inf">
