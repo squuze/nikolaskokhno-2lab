@@ -24,7 +24,7 @@
         <div class="login-wrapper">
           <div class="row justify-content-md-center">
             <div class="col-md-6">
-            <form class="" action="index.html" method="post">
+            <form class="" action="php-server/login_user.php" method="post">
               <h3 class="text-center">Sign-in</h3>
               <p class="bg-danger mt-3 mb-2 text-center" id="message-auth">
                 <b class="">Wrong email or password!</b>
@@ -47,7 +47,7 @@
                 <a href="register_form.php" class="btn btn-primary pull-right"><b>Registration</b></a>
               </div>
               <div class="form-group form-footer text-center">
-                <button id="btn-auth" class="btn btn-success circle border" type="submit">Log-in</button>
+                <button id="btn-auth" class="btn btn-success circle border" type="submit" name="submit">Log-in</button>
               </div>
             </form>
           </div>

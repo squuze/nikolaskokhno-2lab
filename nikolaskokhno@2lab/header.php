@@ -1,3 +1,5 @@
+<?php include 'php-server/connect_database.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,6 +15,38 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
   </head>
   <body>
+    <?php if(isset($_SESSION['email'])) : ?>
+    <nav class="navbar navbar-expand-xl bg-dark scrolling-navbar">
+      <div class="container">
+        <a href="#" class="navbar-brand"><b class="brandLogo">New Generation</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="
+        myNav" aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="#myNav">
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item">
+              <a href="index.php" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Home</button></a>
+            </li>
+            <li class="nav-item">
+              <a href="#newGames" class="nav-link waves-effect waves-light"><button class="btn btn-warning btn-sm">New Games</button></a>
+            </li>
+            <li class="nav-item">
+              <a href="list_product.php" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">List game</button></a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Contact</button></a>
+            </li>
+          </ul>
+            <div class="buttonLogin">
+              <a href="logout.php" type="button" name="login_user" class="btn btn-success btn-sm"><i class="fa fa-sign-in"></i> Exit</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <?php else : ?>
     <nav class="navbar navbar-expand-xl bg-dark scrolling-navbar">
       <div class="container">
         <a href="#" class="navbar-brand"><b class="brandLogo">New Generation</b></a>
@@ -42,6 +76,7 @@
         </div>
       </div>
     </nav>
+  <?php endif;  ?>
   </body>
 </html>
 

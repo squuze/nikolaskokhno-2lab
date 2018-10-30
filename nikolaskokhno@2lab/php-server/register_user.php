@@ -5,7 +5,9 @@
   if (isset($_POST['username']) && isset($_POST['password'])) {
     $email = $_POST ['email'];
     $username = $_POST ['username'];
-    $password = password_hash($_POST ['password'], PASSWORD_DEFAULT);
+    //$password = password_hash($_POST ['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
+
     $query = "INSERT INTO users (email, name, password) VALUES ('$email', '$username', '$password')";
     $result = mysqli_query($link, $query);
 

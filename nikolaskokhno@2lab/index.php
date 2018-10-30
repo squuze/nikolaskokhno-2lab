@@ -1,4 +1,5 @@
 <?php
+  //include 'php-server/connect_database.php';
   include 'header.php';
 ?>
 

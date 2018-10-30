@@ -6,4 +6,6 @@ if(!$link){
   echo "Connect database is fail!", mysqli_connect_error();
   exit();
 }
+
+@session_start();
 ?>
