@@ -1,3 +1,5 @@
+<?php include 'header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,7 +27,7 @@
               </div>
               <div class="form-group">
                 <label for=""><b>Username</b></label>
-                <input type="text" class="form-control" name="username" placeholder="Enret you username..." required>
+                <input type="text" class="form-control" name="username" placeholder="Enter you username..." required>
               </div>
               <div class="form-group">
                 <label for=""><b>Password</b></label>
@@ -60,6 +62,7 @@
       </div>
     </section>
 
+<?php include 'footer.php'; ?>
 
 
 

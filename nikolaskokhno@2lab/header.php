@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="#myNav">
           <ul class="navbar-nav mr-auto smooth-scroll">
             <li class="nav-item">
-              <a href="#home" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Home</button></a>
+              <a href="index.php" class="nav-link waves-effect waves-light"><button class="btn btn-outline-primary btn-sm">Home</button></a>
             </li>
             <li class="nav-item">
               <a href="#newGames" class="nav-link waves-effect waves-light"><button class="btn btn-warning btn-sm">New Games</button></a>
@@ -37,7 +37,7 @@
             </li>
           </ul>
             <div class="buttonLogin">
-              <button type="button" name="login_user" class="btn btn-success btn-sm"><i class="fa fa-sign-in"></i> Login</button>
+              <a href="login_form.php" type="button" name="login_user" class="btn btn-success btn-sm"><i class="fa fa-sign-in"></i> Login</a>
           </div>
         </div>
       </div>
