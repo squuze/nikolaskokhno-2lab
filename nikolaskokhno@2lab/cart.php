@@ -39,6 +39,15 @@
 
   </style>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="title-cart mt-3 mb-2 text-center">
+            <h3>Cart product</h3>
+          </div>
+        </div>
+      </div>
+    </div>
     <?php
       $action = $_GET["action"];
 
@@ -198,7 +207,27 @@
             ';
           }
 
+          echo '
+            <div class="footer-cart mt-3 mb-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 bg-success border border-danger rounded text-white">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-10 mt-3 mb-3">
+                          <b>Total: </b>
+                        </div>
+                        <div class="col-md-2 button-next mt-1 mb-1">
+                          <a type="button" class="btn btn-primary btn-sm">Next</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          ';
 
 
 
@@ -286,7 +315,7 @@
     ?>
   </body>
     <?php
-      //include 'footer.php';
+      include 'footer.php';
     ?>
 
     <!-- JQuery -->
