@@ -23,6 +23,20 @@
       list-style-type: none;
     }
 
+    #input-count-style input{
+      border: 1px solid #DDDDDD;
+      width: 32px;
+      font: 15px sans-serif;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    #count-style{
+      cursor: pointer;
+      font: 15px sans-serif;
+      margin: 1px;
+    }
+
   </style>
   <body>
     <?php
@@ -40,7 +54,7 @@
                       <div class="col-md-12">
                         <div class="name-step">
                           <ul>
-                            <li><a>1.Shopping cart</a></li>
+                            <li><a class="text-dark font-weight-bold">1.Shopping cart</a></li>
                             <li><span>&rarr;</span></li>
                             <li><a>2.Contact info</a></li>
                             <li><span>&rarr;</span></li>
@@ -50,7 +64,7 @@
                         <br />
                           <div class="row">
                             <div class="col-md-10">
-                              <p class="">Step 1 of 3</p>
+                              <p class="font-weight-bold">Step 1 of 3</p>
                             </div>
                             <div class="col-md-2">
                               <a type="button" class="btn btn-danger btn-sm" href="cart.php?action=clear">Clear</a>
@@ -65,14 +79,205 @@
               </div>
             </div>
           ';
+
+          $result = mysqli_query($link,"SELECT * FROM cart, product WHERE  product.id = cart.cart_id");
+
+
+          if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_array($result);
+
+            echo '
+            <div class="product-cart-title">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 bg-light border rounded">
+
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="text-img-product font-weight-bold text-center mt-1">
+                          Image
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="title-game font-weight-bold text-center mt-1">
+                          Title game
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="quantity-product-title font-weight-bold text-center mt-1">
+                          Description
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="price-product-title font-weight-bold text-center mt-1">
+                          Price
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="title-button-clear-price font-weight-bold text-center mt-1">
+                          DELETE
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            ';
+
+            do {
+              echo '
+                <div class="product-cart mt-2">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 bg-light border rounded">
+
+                        <div class="row">
+                        <div class="col-md-2">
+                          <div class="img-product text-center mt-1 mb-1">
+                            <img src="'.$row["img_icon"].'" width="60px;"/>
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <div class="title-game-product text-center mt-4">
+                            '.$row["title_game"].'
+                          </div>
+                        </div>
+
+                        <div class="col-md-3 mt-1">
+                          <div class="publisher">
+                            <b>Publisher: </b>'.$row["publisher"].'
+                          </div>
+                          <div class="genre">
+                            <b>Genre: </b>'.$row["genre"].'
+                          </div>
+                        </div>
+
+                        <div class="col-md-2 mt-4">
+                          <div class="price-product-title text-center mt-1">
+                            '.$row["price"].' <b>руб.</b>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2 mt-3">
+                          <div class="button-clear-price mt-1 text-center">
+                            <a type="button" class="btn btn-danger btn-sm">X</a>
+                          </div>
+                        </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              ';
+
+
+            } while ($row = mysqli_fetch_array($result));
+          }else {
+            echo '
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="text-empty-cart text-center bg-danger border rounded">
+                      <h3 class="mt-3 mb-3">You cart empty!</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ';
+          }
+
+
+
+
+
           break;
 
         case 'confirm':
-          // code...
+        echo '
+          <div id="cart-list" class="mt-3 mb-3">
+            <div class="container">
+              <div="row">
+                <div class="col-md-8  bg-success border border-danger rounded text-white">
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="name-step">
+                        <ul>
+                          <li><a>1.Shopping cart</a></li>
+                          <li><span>&rarr;</span></li>
+                          <li><a class="text-dark font-weight-bold">2.Contact info</a></li>
+                          <li><span>&rarr;</span></li>
+                          <li><a>3.Completion</a></li>
+                        </ul>
+                      </div>
+                      <br />
+                        <div class="row">
+                          <div class="col-md-10">
+                            <p class="font-weight-bold">Step 2 of 3</p>
+                          </div>
+                          <div class="col-md-2">
+                            <a type="button" class="btn btn-danger btn-sm" href="cart.php?action=clear">Clear</a>
+                          </div>
+                        </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        ';
           break;
 
         case 'completion':
-          // code...
+        echo '
+          <div id="cart-list" class="mt-3 mb-3">
+            <div class="container">
+              <div="row">
+                <div class="col-md-8  bg-success border border-danger rounded text-white">
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="name-step">
+                        <ul>
+                          <li><a>1.Shopping cart</a></li>
+                          <li><span>&rarr;</span></li>
+                          <li><a>2.Contact info</a></li>
+                          <li><span>&rarr;</span></li>
+                          <li><a class="text-dark font-weight-bold">3.Completion</a></li>
+                        </ul>
+                      </div>
+                      <br />
+                        <div class="row">
+                          <div class="col-md-10">
+                            <p class="font-weight-bold">Step 3 of 3</p>
+                          </div>
+                          <div class="col-md-2">
+                            <a type="button" class="btn btn-danger btn-sm" href="cart.php?action=clear">Clear</a>
+                          </div>
+                        </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        ';
           break;
         default:
           // code...
@@ -81,7 +286,7 @@
     ?>
   </body>
     <?php
-      include 'footer.php';
+      //include 'footer.php';
     ?>
 
     <!-- JQuery -->
