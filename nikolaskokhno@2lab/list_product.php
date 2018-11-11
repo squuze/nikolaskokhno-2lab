@@ -32,6 +32,7 @@
                 <div class="mt-2 bg-light" style="overflow: hidden;">
                   <li class="border border-primary rounded">
                     <div class="mt-2 mb-2 ml-1 mr-3">
+                    <img src="'.$row["img_icon"].'" width="60px;"/>
                       <b>'.$row["title_game"].'</b>
                       <b class="float-right">Price :
                       '.$row["price"].'</b>

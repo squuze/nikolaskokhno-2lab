@@ -23,15 +23,15 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-4">
-                    <div class="title_game">
-                      <h4 class="mt-3 ml-2">'.$row1["title_game"].'</h4>
+                    <div class="title_game mt-5 border rounded bg-primary text-center">
+                      <h4 class="mt-2 ml-2"mb-3>'.$row1["title_game"].'</h4>
                     </div>
                     <div class="img_game">
-                      <div class="mt-3 ml-2">
-                        <img src="'.$row1["img_icon"].'">
+                      <div class="mt-3 ml-2 text-center border rounded bg-light">
+                        <img src="'.$row1["img_icon"].'" class="mt-3 mb-3">
                       </div>
                     </div>
-                    <div class="inf_game">
+                    <div class="inf_game border rounded bg-success mt-4 text-center">
                       <div class="genre mt-2 ml-2">
                         <h5><b>Genre : </b>'.$row1["genre"].' </h5>
                       </div>
@@ -47,9 +47,9 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
                   <div class="col-lg-8">
                     <div class="row">
                       <div class="col-lg-7">
-                        <div class="game_inf">
+                        <div class="game_inf border rounded bg-success mt-5 text-center">
                           <div class="availability">
-                            <div class="mt-5">
+                            <div class="mt-2">
                               <h5><b>Availability : </b>'.$row1["availability"].' </h5>
                             </div>
                           </div>
@@ -65,12 +65,12 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
                         </div>
                       </div>
                       <div class="col-lg-5">
-                        <div class="price_game">
-                          <div class="price mt-5 ml-2">
+                        <div class="price_game border rounded bg-light mt-5">
+                          <div class="price mt-2 ml-2 mb-3">
                             <h5><b>Price : </b>'.$row1["price"].' </h5>
                           </div>
-                          <div class="button_by">
-                            <div class="btn-group mt-2 ml-2">
+                          <div class="button_by text-center">
+                            <div class="btn-group mt-2 ml-2 mb-3">
                               <a class="btn btn-success" id="addCart_'.$row1["id"].'">Buy game</a>
                               <a class="btn btn-danger">❤</a>
                             </div>
@@ -81,11 +81,11 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
                   <div class="mt-5">
                     <div class="row">
                       <div class="col-lg-12">
-                        <div class="description">
-                          <h4><b>Description : </b>'.$row1["description"].'</h4>
+                        <div class="description border rounded bg-light">
+                          <h4 class="ml-2 mt-3 mb-3 mr-2"><b>Description : </b>'.$row1["description"].'</h4>
                         </div>
-                        <div class="mt-5 feature">
-                          <h4><b>Feature : </b>'.$row1["feature"].'</h4>
+                        <div class="mt-5 feature border rounded bg-light mb-5">
+                          <h4 class="ml-2 mt-3 mb-3 mr-2"><b>Feature : </b>'.$row1["feature"].'</h4>
                         </div>
                       </div>
                     </div>
