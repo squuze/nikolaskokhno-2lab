@@ -1,6 +1,7 @@
 <?php
 include 'php-server/connect_database.php';
 include 'header.php';
+include 'php-server/comments/main.php';
 
 $id = ($_GET['id']);
 $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ");
@@ -70,7 +71,7 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
                           </div>
                           <div class="button_by">
                             <div class="btn-group mt-2 ml-2">
-                              <a class="btn btn-success">Buy game</a>
+                              <a class="btn btn-success" id="addCart_'.$row1["id"].'">Buy game</a>
                               <a class="btn btn-danger">❤</a>
                             </div>
                         </div>
@@ -95,7 +96,39 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
           ';
         } while ($row1 = mysqli_fetch_array($result_product));
       }
+      COMMENTS();
 
+      $result_comment = mysqli_query($link,"SELECT comment, product.id, id_product, name
+        FROM comments, product, users WHERE '$id' = id_product ORDER BY id_product");
+
+        if (mysqli_num_rows($result_comment) > 0) {
+          $row2 = mysqli_fetch_array($result_comment);
+          do {
+            echo '
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4">
+
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="coment-user mt-2 mb-2 bg-light border rounded">
+                      <div class="container">
+                        <div class="row">
+                          <div class="name-user mt-3 mb-3 ml-3 mr-2">
+                            <b>'.$row2["name"].': </b>
+                          </div>
+                          <div class="comment-user mt-3 mb-3">
+                            '.$row2["comment"].'
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ';
+          } while ($row2 = mysqli_fetch_array($result_comment));
+        }
     ?>
   </body>
 </html>

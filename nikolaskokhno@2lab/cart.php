@@ -37,12 +37,24 @@
       margin: 1px;
     }
 
+    .full-name{
+      border: none;
+    }
+
+    .email{
+      border : none;
+    }
+
+    .phone{
+      border: none;
+    }
+
   </style>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <div class="title-cart mt-3 mb-2 text-center">
+          <div class="title-cart mt-3 mb-2 text-center ">
             <h3>Cart product</h3>
           </div>
         </div>
@@ -218,7 +230,7 @@
                           <b>Total: </b>
                         </div>
                         <div class="col-md-2 button-next mt-1 mb-1">
-                          <a type="button" class="btn btn-primary btn-sm">Next</a>
+                          <a type="button" class="btn btn-primary btn-sm" href="cart.php?action=confirm">Next</a>
                         </div>
                       </div>
                     </div>
@@ -226,10 +238,7 @@
                 </div>
               </div>
             </div>
-
           ';
-
-
 
           break;
 
@@ -269,6 +278,115 @@
             </div>
           </div>
         ';
+
+        echo '
+        <!-- Title user information -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="title payment mt-1 mb-2 text-center border border-success rounded">
+                        <h4 class="mt-2 mb-2">User information and payment</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container border border-success rounded bg-light">
+                  <form>
+                    <div class="row mt-3 mb-3">
+                      <div class="col-md-2 ">
+                        <div class="full-name mt-2 mb-2 form-control border-none bg-light">
+                          <b>Name :</b>
+                        </div>
+                        <div class="email mt-2 mb-2 form-control bg-light ">
+                          <b>@Email :</b>
+                        </div>
+                        <div class="phone mt-2 mb-2 form-control bg-light">
+                          <b>Phone :</b>
+                        </div>
+                      </div>
+                      <div class="col-md-10">
+                        <div class="input-name mt-2 mb-2">
+                         <input class="form-control" type="text" placeholder="Enter you full name..." />
+                        </div>
+                        <div class="input-name mt-2 mb-2">
+                         <input class="form-control" type="text" placeholder="Enter you email..." />
+                        </div>
+                        <div class="input-name mt-2 mb-2">
+                         <input class="form-control" type="text" placeholder="Enter you phone..." />
+                        </div>
+                      </div>
+                    </div>
+                    </form>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="title payment mt-2 mb-2 text-center border border-success rounded">
+                        <h4 class="mt-2 mb-2">User card details</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container border border-success rounded bg-light">
+                    <form>
+                      <div class="container">
+                        <div class="row mt-3 mb-2">
+                          <div class="col-md-3">
+                            <b>Number card</b>
+                          </div>
+                          <div class="col-md-9 text-right">
+                            <div class="checkbox">
+                              <input class="text-center" type="checkbox" /><b> Remember card</b>
+                            </div>
+                          </div>
+                          <div class="container mt-1">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="cart-number text-center">
+                                  <input class="form-control" type="text" placeholder="5423 2354 3214 6543" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="date-card mt-1">
+                              <b>Card expiry date</b>
+                            </div>
+                            <div class="data-card-input mb-5">
+                              <input class="form-control" type="text" placeholder="12/18" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ';
+
+        echo '
+          <div class="footer-cart mt-3 mb-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 bg-success border border-danger rounded text-white">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-10 mt-3 mb-3">
+                        <a type="button" class="btn btn-danger btn-sm" href="cart.php?action=oneclick">Back</a>
+                      </div>
+                      <div class="col-md-2 button-next mt-3 mb-3">
+                        <a type="button" class="btn btn-primary btn-sm" href="cart.php?action=completion">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ';
+
           break;
 
         case 'completion':
@@ -315,7 +433,7 @@
     ?>
   </body>
     <?php
-      include 'footer.php';
+      //include 'footer.php';
     ?>
 
     <!-- JQuery -->
