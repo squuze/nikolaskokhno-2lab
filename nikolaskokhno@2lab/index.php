@@ -103,7 +103,7 @@
                 <img src="https://steampay.com/product/the-division-2.jpg" alt="">
               </div>
               <div class="col-lg-1"></div>
-              <div class="col-lg-3 mt-5 ngame">
+              <div class="col-lg-3 mt-5 ngame mb-5">
                 <img src="https://steampay.com/product/raging-justice.jpg" alt="">
               </div>
             </div>

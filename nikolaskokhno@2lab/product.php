@@ -84,7 +84,7 @@ $result_product = mysqli_query($link, "SELECT * FROM product WHERE id = '$id' ")
                         <div class="description border rounded bg-light">
                           <h4 class="ml-2 mt-3 mb-3 mr-2"><b>Description : </b>'.$row1["description"].'</h4>
                         </div>
-                        <div class="mt-5 feature border rounded bg-light mb-5">
+                        <div class="mt-2 feature border rounded bg-light mb-5">
                           <h4 class="ml-2 mt-3 mb-3 mr-2"><b>Feature : </b>'.$row1["feature"].'</h4>
                         </div>
                       </div>

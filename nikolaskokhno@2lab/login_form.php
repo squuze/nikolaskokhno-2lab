@@ -19,7 +19,7 @@
     }
   </style>
   <body>
-    <section class="boxed-sm mt-5">
+    <section class="boxed-sm mt-5 mb-5">
       <div class="container">
         <div class="login-wrapper">
           <div class="row justify-content-md-center">

@@ -54,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <div class="title-cart mt-3 mb-2 text-center ">
+          <div class="title-cart mt-3 mb-2 text-center text-light">
             <h3>Cart product</h3>
           </div>
         </div>
@@ -293,7 +293,7 @@
                     </div>
                   </div>
                   <div class="container border border-success rounded bg-light">
-                  <form>
+                  <form action="php-server/register_order.php" method="post">
                     <div class="row mt-3 mb-3">
                       <div class="col-md-2 ">
                         <div class="full-name mt-2 mb-2 form-control border-none bg-light">
@@ -308,16 +308,17 @@
                       </div>
                       <div class="col-md-10">
                         <div class="input-name mt-2 mb-2">
-                         <input class="form-control" type="text" placeholder="Enter you full name..." />
+                         <input class="form-control" type="text" placeholder="Enter you full name..." name="full_user_name" />
                         </div>
                         <div class="input-name mt-2 mb-2">
-                         <input class="form-control" type="text" placeholder="Enter you email..." />
+                         <input class="form-control" type="text" placeholder="Enter you email..." name="email" />
                         </div>
                         <div class="input-name mt-2 mb-2">
-                         <input class="form-control" type="text" placeholder="Enter you phone..." />
+                         <input class="form-control" type="text" placeholder="Enter you phone..." name="phone"/>
                         </div>
                       </div>
                     </div>
+                    <button type="submit" class="btn btn-primary btn-sm">test</button>
                     </form>
                   </div>
                   <div class="row">
@@ -377,7 +378,7 @@
                         <a type="button" class="btn btn-danger btn-sm" href="cart.php?action=oneclick">Back</a>
                       </div>
                       <div class="col-md-2 button-next mt-3 mb-3">
-                        <a type="button" class="btn btn-primary btn-sm" href="cart.php?action=completion">Next</a>
+                        <a type="button" class="btn btn-primary btn-sm" href="cart.php?action=completion" type="submit">Next</a>
                       </div>
                     </div>
                   </div>
@@ -420,6 +421,18 @@
                     </div>
                   </div>
 
+                </div>
+              </div>
+            </div>
+          </div>
+        ';
+
+        echo '
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="msg-success border rounded bg-success m-3 mb-3 text-center">
+                  <h2>Success</h2>
                 </div>
               </div>
             </div>
