@@ -77,7 +77,7 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Category</h2>
+						<h2>Cenre</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
@@ -132,10 +132,32 @@
 									<h4 class="panel-title"><a href="#">Logical</a></h4>
 								</div>
 							</div>
-						</div><!--/category-products-->
+						</div>
+
+            <div class="brands_products"><!--brands_products-->
+							<h2>Publisher</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right">(50)</span>Ubisoft</a></li>
+									<li><a href="#"> <span class="pull-right">(56)</span>Nintendo</a></li>
+									<li><a href="#"> <span class="pull-right">(27)</span>Electronic Arts</a></li>
+									<li><a href="#"> <span class="pull-right">(32)</span>Sony Computer</a></li>
+									<li><a href="#"> <span class="pull-right">(5)</span>Microsoft</a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
 
 
+						<div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping.jpg" alt="" />
+						</div><!--/shipping-->
 
+					</div>
+				</div>
+
+
+            
+        </section>
   </body>
 </html>
 <?php include 'footer.php'; ?>
