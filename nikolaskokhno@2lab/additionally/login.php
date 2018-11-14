@@ -29,12 +29,12 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
+						<h2>New User Register!</h2>
+						<form action="procedure/reg_user.php" method="post">
+							<input type="text" placeholder="Name" name="name"/>
+							<input type="email" placeholder="Email Address" name="email"/>
+							<input type="password" placeholder="Password" name="password"/>
+							<button type="submit" class="btn btn-default">Registration</button>
 						</form>
 					</div><!--/sign up form-->
 				</div>

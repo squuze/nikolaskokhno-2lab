@@ -199,8 +199,10 @@ include 'procedure/select_procedure.php';
 
         ?>
       </div>
-
-        </section>
+      <div class="recommended_items"><!--recommended_items-->
+				<h2 class="title text-center">recommended items</h2>
+      </div>    
+    </section>
   </body>
 </html>
 <?php include 'footer.php'; ?>
