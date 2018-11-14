@@ -159,35 +159,46 @@ include 'procedure/select_procedure.php';
 				</div>
 
         <div class="col-sm-9 padding-right">
-					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<img src="../img/product1.jpg" alt="" />
-											<h2>$22</h2>
-											<p><?php echo $selectGameArray["title_game"]; ?></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-										<div class="product-overlay">
-											<div class="overlay-content">
-												<h2>$22</h2>
-												<p>Hitman 2</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to favorite</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to cart</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+          <div class="features_items"><!--features_items-->
+            <h2 class="title text-center">best news game</h2>
           </div>
+        <?php
 
+          if (mysqli_num_rows($procedureSelectGame) > 0) {
+            do {
+              echo '
+
+          <div class="col-sm-4">
+            <div class="product-image-wrapper">
+              <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="'.$selectGameArray["img_icon"].'" alt="" height="249px" />
+                    <h2>'.$selectGameArray["price"].'руб.</h2>
+                    <p>'.$selectGameArray["title_game"].'</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+                  <div class="product-overlay">
+                    <div class="overlay-content">
+                      <h2>'.$selectGameArray["price"].'руб.</h2>
+                      <p>'.$selectGameArray["title_game"].'</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                  <li><a href="#"><i class="fa fa-plus-square"></i>Add to favotite</a></li>
+                  <li><a href="#"><i class="fa fa-plus-square"></i>Add to cart</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+              ';
+            } while ($selectGameArray = mysqli_fetch_array($procedureSelectGame));
+          }
+
+        ?>
+      </div>
 
         </section>
   </body>
