@@ -1,3 +1,5 @@
+<?php include '../php-server/connect_database.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
