@@ -1,9 +1,27 @@
 <?php
-      include 'header.php';
-?>
+session_start();
+include 'header.php';
 
-<?php $procedureCartUser = mysqli_query($link, "CALL cartProductUser");
-$cartProductUser = mysqli_fetch_array($procedureCartUser); ?>
+if (isset($_GET['remove']))
+  foreach ($_SESSION['cart'] as $key => $val) {
+    if ($val == $_GET['remove']) {
+      unset($_SESSION['cart'][$key]);
+    }
+  }
+elseif (isset($_GET['remove_all'])) {
+  unset($_SESSION['cart']);
+}
+
+if (!isset($_SESSION['cart']) or $_SESSION['cart'] == null) {
+  echo "no exit product in cart";
+  echo '<br /><a href="listProduct.php" class="btn btn-info">List game</a>';
+}else {
+  $in = implode(',', array_unique($_SESSION['cart']));
+  require '../php-server/connect_database.php';
+
+  $query = mysqli_query($link,"SELECT id, title_game, price, img_icon, publisher FROM product WHERE id IN ($in)");
+  $fullprice = 0;
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -33,38 +51,39 @@ $cartProductUser = mysqli_fetch_array($procedureCartUser); ?>
 						</tr>
 					</thead>
 					<tbody>
-						<?php
-              if (mysqli_num_rows($procedureCartUser) > 0) {
-                do {
-                  echo '
+              <?php while ($row = mysqli_fetch_array($query)) { ?>
+                <?php $fullprice += $row['price'] ?>
                     <tr>
                       <td class="cart_product">
-                        <a href=""><img src="'.$cartProductUser["img_icon"].'" alt="" height="110px" ></a>
+                        <img src="<?php echo $row['img_icon']; ?>" height="110px"/>
                       </td>
                       <td class="cart_description">
-                        <h4><a href="">'.$cartProductUser["title_game"].'</a></h4>
+                        <?php echo $row['title_game']; ?>
                       </td>
                       <td class="cart_price">
-                        <p>'.$cartProductUser["genre"].'</p>
+                        <?php echo $row['price']; ?>
                       </td>
                       <td class="cart_price">
-                        <p>'.$cartProductUser["publisher"].'</p>
-                      </td>
-                      <td class="cart_total">
-                        <p class="cart_total_price">'.$cartProductUser["price"].'руб.</p>
+                        <?php echo $row['publisher']; ?>
                       </td>
                       <td class="cart_delete">
-                        <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                        <a class="cart_quantity_delete" href="?remove=<?php echo $row['id']; ?>"><i class="fa fa-times"></i></a>
                       </td>
                     </tr>
-                  ';
-                } while ($cartProductUser = mysqli_fetch_array($procedureCartUser));
-              }
-            ?>
+            <?php } ?>
+              <tr>
+                <td class="text-right"><h3>Total:</h3></td>
+                <td><h3><?php echo $fullprice; ?></h3></td>
+              </tr>
+              <tr>
+                <td><a href="?remove_all" class="btn btn-danger">Delete all</a></td>
+                <td><a href="listProduct.php" class="btn btn-success">List Product</a></td>
+              </tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
+  <?php } ?>
 	</section>
   </body>
 </html>
